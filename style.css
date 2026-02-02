@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff6e66 0%, #ff8e94 100%);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.teddy {
+  width: 150px;
+  margin-bottom: 20px;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+h2 {
+  color: #d63384;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.2);
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 20px;
+}
+
+#no {
+  background-color: #ff4d6d;
+  color: white;
+  position: absolute;
+  z-index: 100;
+}
+
+.hint {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  animation: heartFloat 3s linear infinite;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
